@@ -3,9 +3,9 @@ import ReactDOM  from 'react-dom'
 import { Provider, connect } from 'react-redux'
 import store from 'config/store'
 
+let newAddedShopIdIndex = 0;
 
 let Shop = connect(({shop}, {id}) => {
-
     return {
         ...shop[id],
         handleChange(key, value) {
@@ -25,7 +25,6 @@ let Shop = connect(({shop}, {id}) => {
     )
 })
 
-let newAddedShopIdIndex = 0;
 
 let Deal = connect(({deal}, {id}) => {
     return {
